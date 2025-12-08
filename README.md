@@ -1,174 +1,69 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <title>Contoh Kelas</title>
-  <meta charset="UTF-8">
-</head>
-<body>
-<h2>Contoh Kelas ProdukKosmetik</h2>
-<pre id="out"></pre>
+class ProdukKosmetik:
+    def __init__(self, nama, harga):
+        self.nama = nama
+        self.harga = harga
+from kelas import ProdukKosmetik
 
-<script>
-class ProdukKosmetik {
-  constructor(nama, harga) {
-    this.nama = nama;
-    this.harga = harga;
-  }
-}
+# Membuat objek
+lipstik = ProdukKosmetik("Lipstik Matte", 50000)
 
-const out = document.getElementById("out");
-out.textContent = "Kelas ProdukKosmetik berhasil dibuat!";
-</script>
-</body>
-</html>
- 
+print("Nama Produk :", lipstik.nama)
+print("Harga       : Rp", lipstik.harga)
+class ProdukKosmetik:
+    def __init__(self, nama, harga):
+        self.nama = nama
+        self.__harga = harga  # enkapsulasi (private)
 
-<!DOCTYPE html>
-<html>
-<head>
-  <title>Contoh Objek</title>
-  <meta charset="UTF-8">
-</head>
-<body>
-<h2>Contoh Objek</h2>
-<pre id="out"></pre>
+    # Getter
+    def get_harga(self):
+        return self.__harga
 
-<script>
-class ProdukKosmetik {
-  constructor(nama, harga) {
-    this.nama = nama;
-    this.harga = harga;
-  }
-}
+    # Setter
+    def set_harga(self, harga_baru):
+        if harga_baru > 0:
+            self.__harga = harga_baru
 
-// membuat objek
-const lipstik = new ProdukKosmetik("Lipstik Matte", 50000);
+# Uji enkapsulasi
+serum = ProdukKosmetik("Serum Acne", 75000)
 
-document.getElementById("out").textContent =
-  Objek dibuat:\nNama: ${lipstik.nama}\nHarga: Rp ${lipstik.harga};
-</script>
-</body>
-</html>
+print("Nama:", serum.nama)
+print("Harga (via getter):", serum.get_harga())
+class ProdukKosmetik:
+    def __init__(self, nama, harga):
+        self.nama = nama
+        self.harga = harga
 
+    def info(self):
+        return f"{self.nama} - Rp {self.harga}"
 
-<!DOCTYPE html>
-<html>
-<head>
-  <title>Contoh Enkapsulasi</title>
-  <meta charset="UTF-8">
-</head>
-<body>
-<h2>Contoh Enkapsulasi</h2>
-<pre id="out"></pre>
+# Class turunan
+class Skincare(ProdukKosmetik):
+    def __init__(self, nama, harga, jenis_kulit):
+        super().__init__(nama, harga)
+        self.jenis_kulit = jenis_kulit
 
-<script>
-class ProdukKosmetik {
-  #harga; // private
+serum = Skincare("Serum Brightening", 90000, "Normal")
 
-  constructor(nama, harga) {
-    this.nama = nama;
-    this.#harga = harga;
-  }
+print(serum.info())
+print("Jenis kulit:", serum.jenis_kulit)
+class ProdukKosmetik:
+    def info(self):
+        return "Ini produk kosmetik umum."
 
-  getHarga() {
-    return this.#harga;
-  }
+class Makeup(ProdukKosmetik):
+    def info(self):
+        return "Makeup dipakai untuk mempercantik wajah."
 
-  setHarga(h) {
-    if (h > 0) this.#harga = h;
-  }
-}
+class Skincare(ProdukKosmetik):
+    def info(self):
+        return "Skincare dipakai untuk merawat kulit."
 
-const serum = new ProdukKosmetik("Serum Acne", 80000);
+# Polimorfisme: method sama, hasil berbeda
+produk_list = [
+    ProdukKosmetik(),
+    Makeup(),
+    Skincare()
+]
 
-document.getElementById("out").textContent =
-  Nama: ${serum.nama}\nHarga (via getter): Rp ${serum.getHarga()};
-</script>
-</body>
-</html>
-
-
- <!DOCTYPE html>
-<html>
-<head>
-  <title>Contoh Inheritance</title>
-  <meta charset="UTF-8">
-</head>
-<body>
-<h2>Contoh Inheritance</h2>
-<pre id="out"></pre>
-
-<script>
-class ProdukKosmetik {
-  constructor(nama, harga) {
-    this.nama = nama;
-    this.harga = harga;
-  }
-
-  info() {
-    return ${this.nama} - Rp ${this.harga};
-  }
-}
-
-// Child class
-class Skincare extends ProdukKosmetik {
-  constructor(nama, harga, jenisKulit) {
-    super(nama, harga);
-    this.jenisKulit = jenisKulit;
-  }
-}
-
-const toner = new Skincare("Toner Glow", 45000, "Berminyak");
-
-document.getElementById("out").textContent =
-  toner.info() + \nJenis Kulit: ${toner.jenisKulit};
-</script>
-</body>
-</html>
-
-
-<!DOCTYPE html>
-<html>
-<head>
-  <title>Contoh Polimorfisme</title>
-  <meta charset="UTF-8">
-</head>
-<body>
-<h2>Contoh Polimorfisme</h2>
-<pre id="out"></pre>
-
-<script>
-class ProdukKosmetik {
-  info() {
-    return "Ini produk kosmetik umum.";
-  }
-}
-
-class Makeup extends ProdukKosmetik {
-  info() {
-    return "Makeup: Produk untuk mempercantik wajah.";
-  }
-}
-
-class Skincare extends ProdukKosmetik {
-  info() {
-    return "Skincare: Produk untuk merawat kulit.";
-  }
-}
-
-// Polimorfisme: memanggil method yang sama → output berbeda
-const list = [
-  new ProdukKosmetik(),
-  new Makeup(),
-  new Skincare()
-];
-
-let text = "";
-list.forEach((p, i) => {
-  text += ${i+1}. ${p.info()}\n;
-});
-
-document.getElementById("out").textContent = text;
-</script>
-</body>
-</html>
+for p in produk_list:
+    print(p.info())
