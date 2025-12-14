@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <title>Dashboard | Sistem Surat</title>
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/admin-lte@3.2/dist/css/adminlte.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css">
+</head>
+
+<body class="hold-transition sidebar-mini">
+<div class="wrapper">
+
+  <!-- Navbar -->
+  <nav class="main-header navbar navbar-expand navbar-white navbar-light">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" data-widget="pushmenu" href="#">
+          <i class="fas fa-bars"></i>
+        </a>
+      </li>
+    </ul>
+  </nav>
+
+  <!-- Sidebar -->
+  <aside class="main-sidebar sidebar-dark-primary elevation-4">
+    <a href="index.html" class="brand-link">
+      <span class="brand-text">Sistem Surat</span>
+    </a>
+
+    <div class="sidebar">
+      <nav>
+        <ul class="nav nav-pills nav-sidebar flex-column">
+          <li class="nav-item">
+            <a href="index.html" class="nav-link active">
+              <i class="nav-icon fas fa-home"></i>
+              <p>Dashboard</p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="surat-masuk.html" class="nav-link">
+              <i class="nav-icon fas fa-envelope"></i>
+              <p>Surat Masuk</p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="surat-keluar.html" class="nav-link">
+              <i class="nav-icon fas fa-paper-plane"></i>
+              <p>Surat Keluar</p>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </aside>
+
+  <!-- Content -->
+  <div class="content-wrapper p-4">
+    <h3>Dashboard</h3>
+    <p>Selamat datang di Sistem Informasi Surat</p>
+
+    <div class="row">
+      <div class="col-lg-4 col-6">
+        <div class="small-box bg-info">
+          <div class="inner">
+            <h3>5</h3>
+            <p>Surat Masuk</p>
+          </div>
+          <div class="icon">
+            <i class="fas fa-envelope"></i>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-6">
+        <div class="small-box bg-success">
+          <div class="inner">
+            <h3>5</h3>
+            <p>Surat Keluar</p>
+          </div>
+          <div class="icon">
+            <i class="fas fa-paper-plane"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/admin-lte@3.2/dist/js/adminlte.min.js"></script>
+</body>
+</html>
+
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <title>Surat Masuk</title>
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/admin-lte@3.2/dist/css/adminlte.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css">
+</head>
+
+<body class="hold-transition sidebar-mini">
+<div class="wrapper">
+
+  <aside class="main-sidebar sidebar-dark-primary elevation-4">
+    <a href="index.html" class="brand-link">
+      <span class="brand-text">Sistem Surat</span>
+    </a>
+
+    <div class="sidebar">
+      <nav>
+        <ul class="nav nav-pills nav-sidebar flex-column">
+          <li class="nav-item">
+            <a href="index.html" class="nav-link">
+              <i class="nav-icon fas fa-home"></i>
+              <p>Dashboard</p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="surat-masuk.html" class="nav-link active">
+              <i class="nav-icon fas fa-envelope"></i>
+              <p>Surat Masuk</p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="surat-keluar.html" class="nav-link">
+              <i class="nav-icon fas fa-paper-plane"></i>
+              <p>Surat Keluar</p>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </aside>
+
+  <div class="content-wrapper p-4">
+    <h3>Data Surat Masuk</h3>
+
+    <div class="card">
+      <div class="card-body">
+        <table class="table table-bordered table-striped">
+          <thead>
+            <tr>
+              <th>No</th>
+              <th>Nomor Surat</th>
+              <th>Tanggal</th>
+              <th>Pengirim</th>
+              <th>Perihal</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1</td>
+              <td>SM-001/DP/2025</td>
+              <td>05-01-2025</td>
+              <td>Dinas Pendidikan</td>
+              <td>Undangan Rapat</td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>SM-002/KC/2025</td>
+              <td>07-01-2025</td>
+              <td>Kantor Camat</td>
+              <td>Permintaan Data</td>
+            </tr>
+            <tr>
+              <td>3</td>
+              <td>SM-003/DS/2025</td>
+              <td>09-01-2025</td>
+              <td>Dinas Sosial</td>
+              <td>Pemberitahuan Bantuan</td>
+            </tr>
+            <tr>
+              <td>4</td>
+              <td>SM-004/PL/2025</td>
+              <td>12-01-2025</td>
+              <td>PLN</td>
+              <td>Pemadaman Listrik</td>
+            </tr>
+            <tr>
+              <td>5</td>
+              <td>SM-005/RS/2025</td>
+              <td>15-01-2025</td>
+              <td>Puskesmas</td>
+              <td>Sosialisasi Kesehatan</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/admin-lte@3.2/dist/js/adminlte.min.js"></script>
+</body>
+</html>
+
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <title>Surat Keluar</title>
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/admin-lte@3.2/dist/css/adminlte.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css">
+</head>
+
+<body class="hold-transition sidebar-mini">
+<div class="wrapper">
+
+  <aside class="main-sidebar sidebar-dark-primary elevation-4">
+    <a href="index.html" class="brand-link">
+      <span class="brand-text">Sistem Surat</span>
+    </a>
+
+    <div class="sidebar">
+      <nav>
+        <ul class="nav nav-pills nav-sidebar flex-column">
+          <li class="nav-item">
+            <a href="index.html" class="nav-link">
+              <i class="nav-icon fas fa-home"></i>
+              <p>Dashboard</p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="surat-masuk.html" class="nav-link">
+              <i class="nav-icon fas fa-envelope"></i>
+              <p>Surat Masuk</p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="surat-keluar.html" class="nav-link active">
+              <i class="nav-icon fas fa-paper-plane"></i>
+              <p>Surat Keluar</p>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </aside>
+
+  <div class="content-wrapper p-4">
+    <h3>Data Surat Keluar</h3>
+
+    <div class="card">
+      <div class="card-body">
+        <table class="table table-bordered table-striped">
+          <thead>
+            <tr>
+              <th>No</th>
+              <th>Nomor Surat</th>
+              <th>Tanggal</th>
+              <th>Tujuan</th>
+              <th>Perihal</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1</td>
+              <td>SK-001/KP/2025</td>
+              <td>06-01-2025</td>
+              <td>Dinas Kependudukan</td>
+              <td>Permohonan Data</td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>SK-002/PP/2025</td>
+              <td>08-01-2025</td>
+              <td>Kantor Camat</td>
+              <td>Laporan Bulanan</td>
+            </tr>
+            <tr>
+              <td>3</td>
+              <td>SK-003/KS/2025</td>
+              <td>10-01-2025</td>
+              <td>Dinas Kesehatan</td>
+              <td>Permohonan Vaksin</td>
+            </tr>
+            <tr>
+              <td>4</td>
+              <td>SK-004/PM/2025</td>
+              <td>13-01-2025</td>
+              <td>Polsek</td>
+              <td>Permohonan Pengamanan</td>
+            </tr>
+            <tr>
+              <td>5</td>
+              <td>SK-005/UM/2025</td>
+              <td>16-01-2025</td>
+              <td>Umum</td>
+              <td>Pemberitahuan Libur</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/admin-lte@3.2/dist/js/adminlte.min.js"></script>
+</body>
+</html>
